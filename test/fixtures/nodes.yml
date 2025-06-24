@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caption: MyString
+  content: MyText
+  id_num: 1
+  module: 1
+  level: 1
+
+two:
+  caption: MyString
+  content: MyText
+  id_num: 1
+  module: 1
+  level: 1

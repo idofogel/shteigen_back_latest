@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shteigen_back_development
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    depends_on:
+      - db
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgres://postgres:postgres@db:5432/shteigen_back_development
+      POSTGRES_DB: shteigen_back_development
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - .:/rails
+    ports:
+      - "3002:3002"
+    command: bash -c "
+        bundle exec rake db:prepare &&
+        bundle exec rake db:migrate &&
+        bundle exec rails server -b 0.0.0.0 -p 3002
+      "
+  client:
+    build:
+      context: ./shteigen  # <-- Path to the React app
+      dockerfile: Dockerfile
+    volumes:
+      - ./shteigen:/app
+      - /app/node_modules  # Avoid issues with host/node_modules mismatch
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    command: ["npm", "start"]
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - web
+volumes:
+  db-data:

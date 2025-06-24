@@ -1,0 +1,357 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.choose-course {
+  left: 22px;
+    position: absolute;
+    top: 223px;
+    cursor: pointer;
+    color: white;
+    background-color: #8ceaee;
+    width: 169px;
+    border-radius: 5px;
+    margin-top: 3px;
+    height: 20px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+.choose-source-fir {
+  position: absolute;
+  top: 254px;
+  /* border-style: solid;
+  border-width: 1px; */
+  left: 193px;
+  z-index:6;
+}
+.choose-source-fir .node-list-item {
+    left: 22px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    background-color: #8ceaee;
+    width: 169px;
+    border-radius: 5px;
+    margin-top: 3px;
+    height: 20px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+.node-list {
+  max-height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  left: 22px;
+  width: 168px;
+}
+.App .concept-headline {
+  cursor:pointer;
+  height: 23px;
+  width: 169px;
+  background-color: grey;
+  border-radius: 5px;
+  color: white;
+  top: 51px;
+  position: absolute;
+  left: 21px;
+}
+.node-list .node-list-item {
+  cursor:pointer;
+  color:white;
+  background-color:#8ceaee;
+  width:169px;
+  border-radius:5px;
+}
+.toggle-up{
+  left: 22px;
+  position: absolute;
+  top: 75px;
+  cursor:pointer;
+  color:white;
+  background-color:#8ceaee;
+  width:169px;
+  border-radius:5px;
+  margin-top:3px;
+  height:20px;
+}
+.toggle-down {
+  left: 22px;
+  position: absolute;
+  top: 199px;
+  cursor:pointer; 
+  color:white;
+  background-color:#8ceaee;
+  width:169px;
+  border-radius:5px;
+  margin-top:3px;
+  height:20px;
+}
+.outer_red_circle {
+  cursor:pointer;
+  background-color:red;
+  border-radius:50%;
+  z-index:6;
+  position:absolute;
+}
+.wellcom {
+    left: calc(50% - 100px);
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+@keyframes grow-line {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+#link {
+  visibility: hidden;
+}
+.choosemodule {
+    position: absolute;
+    top: 450px;
+    left: calc(50% - 115px);
+}
+.modules_names {
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    height: 20px;
+    cursor: pointer;
+    color: blue;
+    margin-left: -20px;
+    direction: rtl;
+}
+.comment-success-cover {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  background-color:rgba(100,100,100,0.5);
+}
+.comment-success-cover .success-x {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    color: white;
+    font-size: 35px;
+    z-index: 15;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 10px;
+    width: 36px;
+}
+ .comment_input {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 150px);
+ }
+.comment-success-cover .comment-saved {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 150px);
+    color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    width: 200px;
+    height: 41px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 23px;
+}
+.input_module {
+  position:absolute;
+  top:380px;
+  width:200px;
+  left: calc(50% - 100px);
+  height:20px;
+}
+.modal-itself {
+  padding:12px;
+  position:absolute;
+  left:50px;
+  top:50px;
+  z-index:13;
+  height:calc(100% - 100px);
+  width:calc(100% - 100px);
+  background-color:white;
+  border-radius:10px;
+}
+.modal-itself textarea {
+  resize:none;
+  position:absolute;
+  left:170px;
+  top:10px;
+  direction: rtl;
+  width:calc(100% - 210px);
+  height:calc(100% - 120px);
+}
+.arch-nodes {
+  border-color:grey;
+  position:absolute;
+  width:150px;
+  height:calc(100% - 70px);
+  top:10px;
+  left:10px;
+  border-radius:5px;
+  border-style:solid;
+  border-style:solid;
+  border-width:1px;
+  overflow: auto;
+}
+.modal-itself button {
+  cursor:pointer;
+  color:grey;
+  width:150px;
+  height:30px;
+  border-radius:5px;
+  position:absolute;
+  bottom:10px;
+  background-color:#8ceaee;
+  border-style:none;
+}
+.connected-node {
+  cursor:pointer;
+  margin-left:10px;
+  color:grey;margin-top:3px;
+  width:130px;
+  /* height:25px; */
+  line-height: 25px;
+  background-color:#8ceaee;
+  border-radius:5px;
+  overflow: auto;
+}
+input {
+    left: 20px;
+    position: absolute;
+    top: 20px;
+}
+.modal-itself .x-modal {
+  cursor:pointer;
+  width:21px;height:24px;
+  background-color:grey;
+  border-radius:3px;
+  position:absolute;
+  top:5px;right:5px;
+  z-index:14;
+  color:white;}
+.modal-background {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+  z-index:12;
+}
+.module-modal {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: 424px;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.modal-background input{
+  position: absolute;
+  left: 170px;
+  top: calc(100% - 94px);
+  direction: rtl;
+    width: 300px;
+    height: 30px;
+    bottom: 0px;
+}
+.modal-background .arch-input {
+      left: calc(50% - 150px);
+    top: calc(50% - 18px);
+}
+.modal-background .success-x{
+      position: absolute;
+    top: 26px;
+    right: 27px;
+    color: gray;
+    font-size: 35px;
+    z-index: 15;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 10px;
+    width: 36px;
+}
+#delete_notice {
+  cursor: pointer;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+  border-radius: 4px;
+  width: 50px;
+  padding-left: 5px;
+  z-index: 10;
+}
+.delete-arch {
+      font-weight: 700;
+    color: white;
+    font-size: 20px;
+    right: 30px;
+    bottom: 23px;
+}
+.arch_item {
+  z-index:0;
+  position:absolute;
+  background-color:blue;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.inner_circle{ 
+  background-color:red;
+  border-radius: 50%;
+  z-index:8;
+  position:absolute;
+}
+.white_circle{
+  background-color:white;
+  border-radius:50%;
+  z-index:7;
+  position:absolute;}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
